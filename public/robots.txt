@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://abel-varghese.com/sitemap.xml
