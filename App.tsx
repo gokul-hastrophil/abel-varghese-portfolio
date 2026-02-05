@@ -239,6 +239,66 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section id="gallery" className="py-24 md:py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-20 text-center">
+            <h2 className="text-green-800 font-bold mb-2 uppercase tracking-[0.3em] text-sm md:text-base">Personal Glimpses</h2>
+            <h3 className="text-5xl md:text-7xl font-black font-montserrat text-gray-900" style={{ color: COLORS.primary }}>Life in Frames</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px] md:auto-rows-[400px]">
+            {/* Main Portrait */}
+            <div className="md:col-span-1 row-span-2 relative group overflow-hidden rounded-3xl shadow-xl">
+              <img
+                src="/assets/misc/profile_pic.jpeg"
+                alt="Abel Varghese Portrait"
+                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                <span className="text-white font-bold tracking-widest uppercase text-sm border-l-4 border-green-500 pl-4">Portrait</span>
+              </div>
+            </div>
+
+            {/* Landscape 1 */}
+            <div className="md:col-span-2 relative group overflow-hidden rounded-3xl shadow-xl">
+              <img
+                src="/assets/misc/profile_pic2.jpeg"
+                alt="Abel Varghese Candid"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                <span className="text-white font-bold tracking-widest uppercase text-sm border-l-4 border-green-500 pl-4">Moments</span>
+              </div>
+            </div>
+
+            {/* Square 1 */}
+            <div className="relative group overflow-hidden rounded-3xl shadow-xl">
+              <img
+                src="/assets/misc/profile_pic3.jpeg"
+                alt="Abel Varghese Lecture"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                <span className="text-white font-bold tracking-widest uppercase text-sm border-l-4 border-green-500 pl-4">Academic Life</span>
+              </div>
+            </div>
+
+            {/* Square 2 */}
+            <div className="relative group overflow-hidden rounded-3xl shadow-xl">
+              <img
+                src="/assets/misc/profile_pic4.jpeg"
+                alt="Abel Varghese Conference"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                <span className="text-white font-bold tracking-widest uppercase text-sm border-l-4 border-green-500 pl-4">Conferences</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Collaboration Section */}
       <section className="py-32 bg-[#004d40] text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
