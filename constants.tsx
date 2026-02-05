@@ -1,5 +1,19 @@
 
-import { Publication, Project, NewsItem, Certification, Book, EducationEntry, ExperienceEntry } from './types';
+import { Publication, Project, NewsItem, Certification, Book, EducationEntry, ExperienceEntry, Course } from './types';
+
+export const COURSES: Course[] = [
+  {
+    id: "nano-tech-energy",
+    title: "Nano Technology Uniqueness in Energy Science",
+    platform: "YouTube Playlist",
+    description: "A comprehensive video series exploring the revolutionary impact of nanotechnology in energy science, covering the nanoscale revolution and the secrets of nanotech applications.",
+    thumbnail: "/assets/misc/hero_bg.jpg", // Fallback or reuse
+    link: "https://youtube.com/playlist?list=PLDDjuyaoyJown7ROxEiGSUbeDWfzoqmkQ&si=rMrmV1qofCn8XW-k",
+    topics: ["The Nanoscale Revolution", "Nanotech Billionth Meter", "Secrets of Nanotechnology", "Energy Applications"],
+    playlistId: "PLDDjuyaoyJown7ROxEiGSUbeDWfzoqmkQ"
+  }
+];
+
 
 export const COLORS = {
   primary: '#004d40',

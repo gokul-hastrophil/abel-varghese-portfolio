@@ -4,7 +4,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
-import { COLORS, PROJECTS, PUBLICATIONS, EDUCATION, EXPERIENCE, BOOKS } from './constants';
+import { COLORS, PROJECTS, PUBLICATIONS, EDUCATION, EXPERIENCE, BOOKS, COURSES } from './constants';
 
 const App: React.FC = () => {
   return (
@@ -299,6 +299,76 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      {/* Courses Section */}
+      <section id="courses" className="py-24 md:py-32 bg-white relative overflow-hidden">
+        {/* Decorative background element */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-30">
+          <div className="absolute top-[20%] left-[5%] w-96 h-96 bg-green-100 rounded-full blur-[128px]"></div>
+          <div className="absolute bottom-[20%] right-[5%] w-80 h-80 bg-blue-50 rounded-full blur-[128px]"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="mb-20 text-center md:text-left">
+            <h2 className="text-green-800 font-bold mb-2 uppercase tracking-[0.3em] text-sm md:text-base">Knowledge Sharing</h2>
+            <h3 className="text-5xl md:text-7xl font-black font-montserrat text-gray-900" style={{ color: COLORS.primary }}>Featured Courses</h3>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Course Content */}
+            <div className="order-2 lg:order-1">
+              <div className="inline-block px-4 py-2 bg-red-100 text-red-600 rounded-full font-bold text-xs uppercase tracking-widest mb-6">
+                YouTube Series
+              </div>
+              <h4 className="text-3xl md:text-5xl font-bold font-montserrat text-gray-900 leading-tight mb-6">
+                {COURSES[0].title}
+              </h4>
+              <p className="text-xl text-gray-600 leading-relaxed mb-8 font-light">
+                {COURSES[0].description}
+              </p>
+
+              <div className="mb-10">
+                <h5 className="font-bold text-gray-900 uppercase tracking-widest text-sm mb-4 border-b border-gray-200 pb-2">Key Modules</h5>
+                <ul className="space-y-4">
+                  {COURSES[0].topics.map((topic, idx) => (
+                    <li key={idx} className="flex items-center text-gray-600 font-medium">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-4"></span>
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <a
+                href={COURSES[0].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest transition-all shadow-xl hover:scale-105 hover:bg-green-800"
+                style={{ backgroundColor: COLORS.primary }}
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" /></svg>
+                Watch Playlist
+              </a>
+            </div>
+
+            {/* Video Embed */}
+            <div className="order-1 lg:order-2">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-black aspect-video group">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/videoseries?list=${COURSES[0].playlistId}`}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Collaboration Section */}
       <section className="py-32 bg-[#004d40] text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
@@ -319,7 +389,7 @@ const App: React.FC = () => {
 
       <Footer />
       <Analytics />
-    </div>
+    </div >
   );
 };
 

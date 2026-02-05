@@ -50,8 +50,20 @@ export interface NewsItem {
   summary: string;
 }
 
+
 export interface Certification {
   name: string;
   issuer: string;
   date: string;
+}
+
+export interface Course {
+  id: string;
+  title: string;
+  platform: string;
+  description: string;
+  thumbnail: string;
+  link: string;
+  topics: string[];
+  playlistId: string;
 }
