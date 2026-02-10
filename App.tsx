@@ -23,6 +23,15 @@ const App: React.FC = () => {
             <br className="hidden md:block" />
             <span className="block mt-8 text-xl md:text-2xl text-gray-500">He is dedicated to bridging chemical engineering with sustainability through innovative resource recovery and industrial safety.</span>
           </p>
+          <div className="mt-10 inline-flex items-center gap-3 px-6 py-3 bg-green-50 border border-green-200 rounded-full">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </span>
+            <span className="text-green-800 font-semibold text-sm md:text-base tracking-wide">
+              Currently Researching on → Nuclear Energy Ion & CO2 Capture (Direct Air Capture) & Recycling | 🇸🇦 SAMI
+            </span>
+          </div>
         </div>
       </section>
 
@@ -370,20 +379,85 @@ const App: React.FC = () => {
       </section>
 
       {/* Collaboration Section */}
-      <section className="py-32 bg-[#004d40] text-center relative overflow-hidden">
+      <section id="contact" className="py-32 bg-[#004d40] relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div className="max-w-5xl mx-auto px-6 relative z-10">
-          <h2 className="text-5xl md:text-7xl font-black mb-10 font-montserrat text-white tracking-tight">Collaboration & Inquiries</h2>
-          <p className="text-green-100 leading-relaxed max-w-3xl mx-auto mb-16 text-xl md:text-2xl font-light">
-            I invite you to reach out for research collaborations, industrial project inquiries,
-            or professional networking in Chemical Engineering and Sustainability.
-          </p>
-          <a
-            href="mailto:abeltvarghese14@gmail.com"
-            className="inline-block bg-white text-[#004d40] px-16 py-6 rounded-full font-bold uppercase tracking-widest hover:bg-green-50 transition-all text-sm shadow-2xl hover:scale-105"
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-7xl font-black mb-10 font-montserrat text-white tracking-tight">Collaboration & Inquiries</h2>
+            <p className="text-green-100 leading-relaxed max-w-3xl mx-auto text-xl md:text-2xl font-light">
+              I invite you to reach out for research collaborations, industrial project inquiries,
+              or professional networking in Chemical Engineering and Sustainability.
+            </p>
+          </div>
+
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.target as HTMLFormElement;
+              const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+              const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+              const subject = (form.elements.namedItem('subject') as HTMLInputElement).value;
+              const description = (form.elements.namedItem('description') as HTMLTextAreaElement).value;
+              const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${description}`;
+              window.location.href = `mailto:abeltvarghese14@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+            }}
+            className="max-w-2xl mx-auto"
           >
-            Send a Message
-          </a>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label htmlFor="name" className="block text-green-200 text-sm font-bold uppercase tracking-widest mb-2">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full px-5 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-green-200/50 focus:outline-none focus:border-green-400 focus:bg-white/15 transition-all text-lg"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-green-200 text-sm font-bold uppercase tracking-widest mb-2">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full px-5 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-green-200/50 focus:outline-none focus:border-green-400 focus:bg-white/15 transition-all text-lg"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+            <div className="mb-6">
+              <label htmlFor="subject" className="block text-green-200 text-sm font-bold uppercase tracking-widest mb-2">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                className="w-full px-5 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-green-200/50 focus:outline-none focus:border-green-400 focus:bg-white/15 transition-all text-lg"
+                placeholder="What is this regarding?"
+              />
+            </div>
+            <div className="mb-8">
+              <label htmlFor="description" className="block text-green-200 text-sm font-bold uppercase tracking-widest mb-2">Description</label>
+              <textarea
+                id="description"
+                name="description"
+                required
+                rows={5}
+                className="w-full px-5 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-green-200/50 focus:outline-none focus:border-green-400 focus:bg-white/15 transition-all text-lg resize-none"
+                placeholder="Tell me about your inquiry..."
+              />
+            </div>
+            <div className="text-center">
+              <button
+                type="submit"
+                className="bg-white text-[#004d40] px-16 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-green-50 transition-all text-sm shadow-2xl hover:scale-105"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
         </div>
       </section>
 

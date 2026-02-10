@@ -51,6 +51,7 @@ export interface NewsItem {
 }
 
 
+
 export interface Certification {
   name: string;
   issuer: string;

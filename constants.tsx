@@ -32,6 +32,13 @@ export const EDUCATION: EducationEntry[] = [
     skills: ["Advanced Chemical Engineering", "Research", "Process Simulation"]
   },
   {
+    institution: "NASA",
+    degree: "Open Science and Open Science Essentials Specialisation",
+    duration: "Jul 2025 - Nov 2025",
+    logo: "/assets/logos/nasa.png",
+    skills: ["Open Science", "Open Data", "Reproducible Research", "Scientific Collaboration"]
+  },
+  {
     institution: "Technion - Israel Institute of Technology",
     degree: "Specialisation, Nanotechnology",
     duration: "Jan 2020 - Aug 2020",
