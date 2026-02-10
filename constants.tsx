@@ -42,7 +42,6 @@ export const EDUCATION: EducationEntry[] = [
     institution: "Technion - Israel Institute of Technology",
     degree: "Specialisation, Nanotechnology",
     duration: "Jan 2020 - Aug 2020",
-    grade: "80%",
     logo: "/assets/logos/technion.svg",
     skills: ["Nanotechnology", "Nanomaterials", "Nanocomposites", "Nanoparticles"]
   },
@@ -57,7 +56,6 @@ export const EDUCATION: EducationEntry[] = [
     institution: "The Johns Hopkins University",
     degree: "Specialisation, Chemical and Health",
     duration: "Jan 2019 - Jul 2020",
-    grade: "84%",
     logo: "/assets/logos/jhu.png",
     skills: ["Chemical Safety", "Public Health", "Occupational Health"]
   },
@@ -65,7 +63,6 @@ export const EDUCATION: EducationEntry[] = [
     institution: "Anna University Chennai",
     degree: "Bachelor of Technology - BTech, Chemical Engineering",
     duration: "Aug 2019 - May 2023",
-    grade: "7.92 CGPA",
     logo: "/assets/logos/anna_univ.png",
     skills: ["Process Design", "Industrial Safety", "Aspen Plus", "Chemical Process Engineering"]
   },
@@ -73,7 +70,6 @@ export const EDUCATION: EducationEntry[] = [
     institution: "Hindusthan College of Engineering and Technology",
     degree: "Specialization, Lab Analyst - Rubber",
     duration: "Aug 2022 - Apr 2023",
-    grade: "A",
     logo: "/assets/logos/hicet.png",
     skills: ["Laboratory Skills", "Workplace Safety", "Process Design"]
   }
