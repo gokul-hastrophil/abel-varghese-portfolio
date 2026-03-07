@@ -77,6 +77,14 @@ export const EDUCATION: EducationEntry[] = [
 
 export const EXPERIENCE: ExperienceEntry[] = [
   {
+    role: "Partner Scientist (P.S)",
+    company: "Royal Society of Chemistry",
+    duration: "Mar 2026 - Present",
+    location: "United Kingdom",
+    description: "Contributing as a Partner Scientist to advance chemistry research and scientific excellence.",
+    skills: ["Scientific Research", "Chemistry", "Academic Collaboration"]
+  },
+  {
     role: "Graduate Research And Teaching Assistant",
     company: "King Fahd University of Petroleum & Minerals - KFUPM",
     duration: "Jan 2026 - Present",
