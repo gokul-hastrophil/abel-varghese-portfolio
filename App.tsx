@@ -19,7 +19,7 @@ const App: React.FC = () => {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <p className="text-gray-700 text-2xl md:text-3xl lg:text-4xl leading-relaxed font-light font-montserrat tracking-tight">
             <span className="font-bold text-green-900 block mb-6 text-4xl md:text-5xl">Abel Thekkeparampil Varghese</span>
-            is a Ph.D. Scholar at <span className="font-semibold text-green-800 border-b-2 border-green-200">KFUPM</span> and a former Project Associate at <span className="font-semibold text-green-800 border-b-2 border-green-200">IISc Bengaluru</span>.
+            is a Doctoral Researcher at <span className="font-semibold text-green-800 border-b-2 border-green-200">KFUPM</span> and a former Project Associate at <span className="font-semibold text-green-800 border-b-2 border-green-200">IISc Bengaluru</span>.
             <br className="hidden md:block" />
             <span className="block mt-8 text-xl md:text-2xl text-gray-500">He is dedicated to bridging chemical engineering with sustainability through innovative resource recovery and industrial safety.</span>
           </p>
